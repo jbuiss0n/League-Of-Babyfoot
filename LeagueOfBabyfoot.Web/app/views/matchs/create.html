@@ -1,0 +1,35 @@
+﻿<div class="match-create panel panel-default" ng-class="{ active: isCreating() }" ng-style="{ top: ($(document).scrollTop() + 50) + 'px' }">
+  <div class="panel-heading">
+    New Match
+  </div>
+  <div class="panel-body" ng-escape="cancel()">
+    <form role="form" name="form" class="css-form" novalidate>
+      
+      <div class="form-group">
+        <label>When</label>
+        <input type="date" class="form-control" ng-model="match.date" required />
+      </div>
+
+      <div class="form-group">
+        <label>Team 1</label>
+        <input type="text" class="form-control" ng-model="match.team1" required />
+      </div>
+
+      <div class="form-group">
+        <label>Team 2</label>
+        <input type="text" class="form-control" ng-model="match.team2" required />
+      </div>
+
+      <div class="form-group" ng-show="!isSaving()">
+        <button ng-click="save()" ng-disabled="form.$invalid" class="btn btn-xs btn-success pull-right">
+          <span class="glyphicon glyphicon-ok"></span>
+          <span>Save</span>
+        </button>
+        <button ng-click="cancel()" class="btn btn-xs btn-link pull-right">
+          <span class="glyphicon glyphicon-remove"></span>
+          <span>Cancel</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

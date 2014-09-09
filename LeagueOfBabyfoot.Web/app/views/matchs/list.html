@@ -1,0 +1,14 @@
+﻿<ul class="list-group match-list">
+  <li class="list-group-item match-item match-header">
+    <span class="match-date">Date</span>
+    <span class="match-members text-right">Team 1</span>
+    <span class="match-score text-center">Score</span>
+    <span class="match-members text-left">Team 2</span>
+  </li>
+  <li class="list-group-item match-item"
+      ng-repeat="match in matchs"
+      ng-controller="MatchController"
+      ng-init="init(match)"
+      ng-include="'views/matchs/match.html'">
+  </li>
+</ul>

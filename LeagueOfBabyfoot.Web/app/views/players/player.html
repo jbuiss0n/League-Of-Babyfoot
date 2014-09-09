@@ -1,0 +1,5 @@
+﻿<span class="player-name"><a ng-href="#/players/{{ player.Name }}">{{ player.Name }}</a></span>
+<span class="player-score" ng-class="{ 'positive': player.Score > 0, 'negative': player.Score < 0 }">{{ player.Score | number:2 }}</span>
+<span class="player-win">{{ player.Win }}</span>
+<span class="player-loose">{{ player.Loose }}</span>
+<span class="player-diff">{{ player.Diff }} <em>({{ player.Scored }} - {{ player.Conceded }})</em></span>

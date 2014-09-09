@@ -1,0 +1,153 @@
+/*$icon-font-path: "../bower_components/sass-bootstrap/fonts/";*/
+
+@import '../bower_components/bootstrap/less/bootstrap.less';
+
+body {
+  padding-top: 50px;
+}
+
+a {
+  cursor: pointer;
+}
+
+abbr[tooltip] {
+  cursor: help;
+  border-bottom: 1px dotted @abbr-border-color;
+}
+
+.navbar {
+  margin-bottom: 10px;
+}
+
+.navbar a {
+  color: black;
+}
+
+.navbar-header .logo {
+  float: left;
+  margin: 2px 5px 2px 0;
+}
+
+.loader {
+  text-align: center;
+  padding: 100px;
+}
+
+.inner-loader {
+  text-align: center;
+}
+
+.checkbox {
+  cursor: pointer;
+}
+
+.error-emoticon {
+  font-size: 80px;
+  text-align: center;
+  margin: 20px;
+  color: #a94442;
+}
+
+.error-emoticon p {
+  transform: rotate(90deg);
+}
+
+.fixed-side-panel {
+  position: fixed;
+  width: 33%;
+  min-width: 512px;
+  max-height: 90%;
+  overflow: auto;
+  right: -50%;
+  opacity: 0;
+  top: 0;
+  -moz-transition: all 500ms ease-in-out;
+  -o-transition: all 500ms ease-in-out;
+  -webkit-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+  box-shadow: -3px 3px 7px 1px #ECECEC;
+  margin: 15px 0 15px 0;
+  border: 1px solid #ECECEC;
+  z-index: 1031;
+
+  &.active {
+    right: 10%;
+    opacity: 1;
+  }
+
+  ;
+
+  .panel-body {
+    overflow: auto,;
+  }
+}
+
+.match-create {
+  .fixed-side-panel();
+}
+
+.match-index .match-list {
+  display: inline-block;
+}
+
+.match-list .match-header {
+  font-weight: bold;
+}
+
+.match-item .match-date {
+  width: 140px;
+  display: inline-block;
+}
+
+.match-item .match-members {
+  width: 80px;
+  display: inline-block;
+}
+
+.match-item .match-score {
+  width: 80px;
+  display: inline-block;
+}
+
+.match-item .match-score .win {
+  font-weight: bold;
+  color: green;
+}
+
+.match-item .match-score .loose {
+  color: red;
+}
+
+.player-list .player-header {
+  font-weight: bold;
+}
+
+.player-item .player-name {
+  width: 70px;
+  display: inline-block;
+}
+
+.player-item .player-score {
+  width: 80px;
+  color: #2e2e2e;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.player-item .player-score.positive {
+  color: green;
+}
+
+.player-item .player-score.negative {
+  color: red;
+}
+
+.player-item .player-win {
+  width: 70px;
+  display: inline-block;
+}
+
+.player-item .player-loose {
+  width: 70px;
+  display: inline-block;
+}

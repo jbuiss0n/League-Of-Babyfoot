@@ -1,0 +1,25 @@
+﻿<div class="main">
+
+  <div class="row">
+
+    <div class="col-md-5">
+      <h3>
+        <span>Last five matchs</span>
+        <a href="#/matchs" class="btn btn-link pull-right">&gt; All matchs</a>
+      </h3>
+      <div ng-controller="MatchListController" ng-init="init({ limit: 5 })" ng-include="'views/matchs/list.html'"></div>
+    </div>
+
+    <div class="col-md-2"></div>
+
+    <div class="col-md-5">
+      <h3>
+        <span>Top five players</span>
+        <a href="#/players" class="btn btn-link pull-right">&gt; All players</a>
+      </h3>
+      <div ng-controller="PlayerListController" ng-init="init({ limit: 5 })" ng-include="'views/players/list.html'"></div>
+    </div>
+
+  </div>
+
+</div>

@@ -1,0 +1,15 @@
+﻿<span class="match-date">{{ match.DateCreation | date:'dd/MM/yyyy HH:mm' }}</span>
+
+<span class="text-right match-members">
+  <span ng-controller="MatchMembersController" ng-init="init(match.FirstTeamMembers)" ng-include="'views/matchs/members.html'"></span>
+</span>
+
+<span class="text-center match-score">
+  <span ng-class="{ 'win': isWinScore(match.FirstTeamScore), 'loose': isLooseScore(match.FirstTeamScore) }">{{ match.FirstTeamScore }}</span>
+  <strong>-</strong>
+  <span ng-class="{ 'win': isWinScore(match.SecondTeamScore), 'loose': isLooseScore(match.SecondTeamScore) }">{{ match.SecondTeamScore }}</span>
+</span>
+
+<span class="text-left match-members">
+  <span ng-controller="MatchMembersController" ng-init="init(match.SecondTeamMembers)" ng-include="'views/matchs/members.html'"></span>
+</span>

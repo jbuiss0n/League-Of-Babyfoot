@@ -1,0 +1,14 @@
+﻿<div class="match-index">
+  <h3>
+    <span>All matchs</span>
+
+    <button class="btn btn-xs btn-primary pull-right" ng-click="createMatch()">
+      <span class="glyphicon glyphicon-plus"></span>
+      <span>New Match</span>
+    </button>
+  </h3>
+
+  <div ng-controller="MatchListController" ng-init="init()" ng-include="'views/matchs/list.html'"></div>
+
+  <div ng-controller="MatchCreateController" ng-init="init()" ng-include="'views/matchs/create.html'"></div>
+</div>

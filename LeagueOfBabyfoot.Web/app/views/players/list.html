@@ -1,0 +1,15 @@
+﻿<ul class="list-group player-list">
+  <li class="list-group-item player-item player-header">
+    <span class="player-name">Player</span>
+    <span class="player-score">Score</span>
+    <span class="player-win">Win</span>
+    <span class="player-loose">Lost</span>
+    <span class="player-diff">Diff</span>
+  </li>
+  <li class="list-group-item player-item"
+      ng-repeat="player in players"
+      ng-controller="PlayerController"
+      ng-init="init(player)"
+      ng-include="'views/players/player.html'">
+  </li>
+</ul>

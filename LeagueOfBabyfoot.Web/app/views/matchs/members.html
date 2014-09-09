@@ -1,0 +1,6 @@
+﻿<span ng-repeat="(index, member) in members">
+  <a ng-href="#/players/{{member}}">
+    {{ member }}
+  </a>
+  <span ng-if="index < members.length - 1">et</span>
+</span>
